@@ -1,0 +1,19 @@
+ <h4>YOUR TASK LIST :</h4>
+ <%= link_to "Create a new task", new_path%>
+ <div class="taskContainer">
+ <% @tasks.each do |task| %>
+  <a href=<%= "tasks/" + task.id.to_s %> >
+  <div class="taskCard">
+
+    <% task.done ? done = "x" : done = "_"%>
+    <% task.important ? important = "!" : important = " "%>
+    <% created = task.created_at.day.to_s + "/" + task.created_at.month.to_s + "/" + task.created_at.year.to_s %>
+
+    <div class="task taskDone">[<%=done%>]</div>
+    <div class="task taskImportant"><%=important%></div>
+    <div class="task taskContent"><%=task.content%></div>
+    <div class="task taskDate"><small>( <%=created%> )</small></div>
+  </div>
+  </a>
+<%end%>
+</div>

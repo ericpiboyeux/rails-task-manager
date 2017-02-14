@@ -1,0 +1,11 @@
+<h4>NEW</h4>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label "Task description" %>
+  <%= f.text_field :content %>
+
+  <%= f.label "Important task" %>
+  <%= f.check_box :important %>
+
+  <%= f.submit %>
+<% end %>

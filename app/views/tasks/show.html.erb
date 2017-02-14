@@ -1,0 +1,18 @@
+<% created = @task.created_at.day.to_s + "/" + @task.created_at.month.to_s + "/" + @task.created_at.year.to_s %>
+<% updated = @task.updated_at.day.to_s + "/" + @task.updated_at.month.to_s + "/" + @task.updated_at.year.to_s %>
+
+<div class="detailContainer">
+  <div class="detailCard">
+    <div class="detailTitle">
+      <div class="detail" id="squareDone"></div>
+      <div class="detail detailContent"><%= @task.content %></div>
+    </div>
+
+  <div class="detail detailImportant"><%= @task.important ? "IMPORTANT TASK" : " "%></div>
+  <div class="detailDate">Created : <%= created%></div>
+  <div class="detailDate">Updated : <%= updated%></div>
+  <small><%= link_to "edit task", edit_path(@task)%></small>
+  <small><%= link_to "delete task", edit_path(@task)%></small>
+  </div>
+
+</div>

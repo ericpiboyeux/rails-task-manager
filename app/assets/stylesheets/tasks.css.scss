@@ -1,0 +1,51 @@
+.taskContainer, .detailContainer {
+  display: block;
+  font-family: sans-serif;
+  color: black;
+}
+
+.taskCard, .detailCard {
+  display: block;
+  padding: 4px;
+  margin: 3px;
+  border-radius: 3px;
+  background: #EEE;
+}
+
+.task {
+  display: inline;
+}
+
+.detail {
+  display: inline-block;
+}
+
+.detailDate {
+  padding: 8px;
+  margin-left: 25px;
+}
+
+.detailContent {
+  font-size: 20px;
+  padding: 4px;
+}
+
+.detailImportant {
+  padding: 8px;
+  color: red;
+  margin-left: 25px;
+}
+
+#squareDone {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-style: solid;
+  border-color: black;
+  margin-right: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
